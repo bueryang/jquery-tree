@@ -1,2 +1,2 @@
-# jquery-tree
+# jquery-tree-plugin
 jquery tree plugin
