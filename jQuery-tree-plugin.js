@@ -66,8 +66,8 @@ $(function () {
         " </ul>";
     $('body').append(menuStr);
 
-    $('.jQuery-tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
-    $('.jQuery-tree li.parent_li > span').on('click', function (e) {
+    $('.jQuery-tree li:has(ul)').addClass('parent_li').find(' > span.menu-item').attr('title', 'Collapse this branch');
+    $('.jQuery-tree li.parent_li > span.menu-item').on('click', function (e) {
         var children = $(this).parent('li.parent_li').find(' > ul > li');
         if (children.is(":visible")) {
             children.hide('fast');
@@ -85,14 +85,14 @@ $(function () {
             var msg = "You selected the menu item '" + selectedMenu.text() +
                 "' on the value '" + invokedOn.text() + "'";
 
-            var age = prompt("Please input", "New Item");
+            var itemName = prompt("Please input", "New Item");
 
 
             if (invokedOn.parent().find("ul").length > 0) {
-                var $newItem = $("<li> <span><i class='icon-leaf'></i> " + age + "</span> <a href=''>Goes somewhere</a></li>");
+                var $newItem = $("<li> <span class='menu-item'><i class='icon-leaf'></i> " + itemName + "</span> <input type='checkbox' checked='checked'></li>");
                 invokedOn.parent().find("ul:first").append($newItem);
             } else {
-                var $newItem = $("<ul><li> <span><i class='icon-leaf'></i> " + age + "</span> <a href=''>Goes somewhere</a></li></ul>");
+                var $newItem = $("<ul><li> <span class='menu-item'><i class='icon-leaf'></i> " + itemName + "</span> <input type='checkbox' checked='checked'></li></ul>");
                 invokedOn.parent().append($newItem);
             }
 
