@@ -66,11 +66,19 @@
 }
 
 .jQuery-tree li:last-child::before {
-    height: 30px
+    height: 25px
 }
 
 .jQuery-tree li.parent_li > span:hover, .jQuery-jQuery-tree li.parent_li > span:hover + ul li span {
     background: #eee;
     border: 1px solid #94a0b4;
     color: #000
+}
+
+.jQuery-tree .icon-plus-sign:before{
+    content: '+';
+}
+
+.jQuery-tree .icon-minus-sign:before {
+    content: '-';
 }

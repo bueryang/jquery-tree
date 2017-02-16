@@ -14,34 +14,15 @@
 
 
 <div class="container">
-    <div class="jQuery-tree">
-        <ul>
-            <li>
-                <span class="menu-item"><i class="icon-folder-open"></i> Parent</span> <input type="checkbox" checked="checked" value="true">
-                <ul>
-                    <li>
-                        <span class="menu-item"><i class="icon-minus-sign"></i> Child</span><input type="checkbox"  value="true">
-                        <ul>
-                            <li>
-                                <span class="menu-item"><i class="icon-leaf"></i> Grand Child</span><input type="checkbox"  value="true">
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="menu-item"><i class="icon-minus-sign"></i> Child</span><input type="checkbox"  value="true">
-                        <ul>
-                            <li>
-                                <span class="menu-item"><i class="icon-leaf"></i> Grand Child</span><input type="checkbox"  value="true">
-                            </li>
-                            <li>
-                                <span class="menu-item"><i class="icon-leaf"></i> Grand Child</span><input type="checkbox"  value="true">
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div class="jQuery-tree" id="jQuery-tree">
     </div>
 </div>
+<script>
+    $(function () {
+        $("#jQuery-tree").jQueryTree({
+            dataUrl:'http://localhost:60280/admin/category/tree'
+        });
+    })
+</script>
 </body>
 </html>
