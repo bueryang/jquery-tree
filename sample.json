@@ -1,0 +1,63 @@
+{
+  "id": 0,
+  "parentId": -1,
+  "name": "root",
+  "children": [
+    {
+      "id": 1001,
+      "parentId": 0,
+      "name": "clothing",
+      "children": []
+    },
+    {
+      "id": 2001,
+      "parentId": 0,
+      "name": "electrical equipment",
+      "children": [
+        {
+          "id": 2101,
+          "parentId": 2001,
+          "name": "phone",
+          "children": [
+            {
+              "id": 2111,
+              "parentId": 2101,
+              "name": "HUAWEI",
+              "children": []
+            },
+            {
+              "id": 2121,
+              "parentId": 2101,
+              "name": "IPHONE",
+              "children": []
+            },
+            {
+              "id": 2131,
+              "parentId": 2101,
+              "name": "SAMSUNG",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 2201,
+          "parentId": 2001,
+          "name": "Air conditioner",
+          "children": []
+        },
+        {
+          "id": 2301,
+          "parentId": 2001,
+          "name": "Refrigerator",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3001,
+      "parentId": 0,
+      "name": " Daily Necessities ",
+      "children": []
+    }
+  ]
+}

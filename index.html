@@ -16,12 +16,26 @@
 <div class="container">
     <div class="jQuery-tree" id="jQuery-tree">
     </div>
+    <div>
+        <button id="log">log</button>
+    </div>
 </div>
 <script>
     $(function () {
         $("#jQuery-tree").jQueryTree({
-            dataUrl:'http://localhost:60280/admin/category/tree'
+            dataUrl: 'http://localhost:60280/admin/category/tree',
+            changeCallback: function (data) {
+                console.log(data);
+            },
+            onNewItem: function (data) {
+                console.log(data);
+            }
         });
+
+        $("#log").click(function () {
+            console.log($.fn.jQueryTree.getSelected($("#jQuery-tree")));
+        })
+
     })
 </script>
 </body>
